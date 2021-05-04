@@ -5,8 +5,8 @@ class CreateWorkorders < ActiveRecord::Migration[6.1]
       t.string :caller
       t.string :type
       t.string :technician
-      # t.string :attachment
       t.datetime :target_date
+      t.string :resolution
 
       t.timestamps
     end

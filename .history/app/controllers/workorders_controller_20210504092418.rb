@@ -64,6 +64,6 @@ class WorkordersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def workorder_params
-      params.require(:workorder).permit(:description, :caller, :type, :technician, :target_date)
+      params.require(:workorder).permit(:description, :caller, :type, :technician, :attachment, :target_date, :customer_id)
     end
 end

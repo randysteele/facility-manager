@@ -1,47 +1,42 @@
 <%= form_with(model: workorder) do |form| %>
-<% if workorder.errors.any? %>
-<div id="error_explanation">
-    <h2><%= pluralize(workorder.errors.count, "error") %> prohibited this workorder from being saved:</h2>
+  <% if workorder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workorder.errors.count, "error") %> prohibited this workorder from being saved:</h2>
 
-    <ul>
+      <ul>
         <% workorder.errors.each do |error| %>
-        <li><%= error.full_message %></li>
+          <li><%= error.full_message %></li>
         <% end %>
-    </ul>
-</div>
-<% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<div class="field">
+  <div class="field">
     <%= form.label :description %>
-    <%= form.text_area :description %>
-</div>
+    <%= form.text_field :description %>
+  </div>
 
-<div class="field">
+  <div class="field">
     <%= form.label :caller %>
     <%= form.text_field :caller %>
-</div>
+  </div>
 
-<div class="field">
+  <div class="field">
     <%= form.label :type %>
     <%= form.text_field :type %>
-</div>
+  </div>
 
-<div class="field">
+  <div class="field">
     <%= form.label :technician %>
     <%= form.text_field :technician %>
-</div>
+  </div>
 
-<div class="field">
-    <%= form.label :attachment %>
-    <%= form.text_field :attachment %>
-</div>
-
-<div class="field">
+  <div class="field">
     <%= form.label :target_date %>
     <%= form.datetime_select :target_date %>
-</div>
+  </div>
 
-<div class="actions">
+  <div class="actions">
     <%= form.submit %>
-</div>
+  </div>
 <% end %>

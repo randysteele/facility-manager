@@ -1,3 +1,3 @@
 class Workorder < ApplicationRecord
-    has_many :customers 
+has_one :customer     
 end

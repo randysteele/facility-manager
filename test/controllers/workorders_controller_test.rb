@@ -17,7 +17,7 @@ class WorkordersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create workorder" do
     assert_difference('Workorder.count') do
-      post workorders_url, params: { workorder: { attachment: @workorder.attachment, caller: @workorder.caller, description: @workorder.description, target_date: @workorder.target_date, technician: @workorder.technician, type: @workorder.type } }
+      post workorders_url, params: { workorder: { caller: @workorder.caller, description: @workorder.description, target_date: @workorder.target_date, technician: @workorder.technician, type: @workorder.type } }
     end
 
     assert_redirected_to workorder_url(Workorder.last)
@@ -34,7 +34,7 @@ class WorkordersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update workorder" do
-    patch workorder_url(@workorder), params: { workorder: { attachment: @workorder.attachment, caller: @workorder.caller, description: @workorder.description, target_date: @workorder.target_date, technician: @workorder.technician, type: @workorder.type } }
+    patch workorder_url(@workorder), params: { workorder: { caller: @workorder.caller, description: @workorder.description, target_date: @workorder.target_date, technician: @workorder.technician, type: @workorder.type } }
     assert_redirected_to workorder_url(@workorder)
   end
 

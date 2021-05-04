@@ -14,7 +14,6 @@ class WorkordersTest < ApplicationSystemTestCase
     visit workorders_url
     click_on "New Workorder"
 
-    fill_in "Attachment", with: @workorder.attachment
     fill_in "Caller", with: @workorder.caller
     fill_in "Description", with: @workorder.description
     fill_in "Target date", with: @workorder.target_date
@@ -30,7 +29,6 @@ class WorkordersTest < ApplicationSystemTestCase
     visit workorders_url
     click_on "Edit", match: :first
 
-    fill_in "Attachment", with: @workorder.attachment
     fill_in "Caller", with: @workorder.caller
     fill_in "Description", with: @workorder.description
     fill_in "Target date", with: @workorder.target_date
