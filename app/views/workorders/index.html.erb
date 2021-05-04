@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Workorders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Caller</th>
+      <th>Type</th>
+      <th>Technician</th>
+      <th>Attachment</th>
+      <th>Target date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workorders.each do |workorder| %>
+      <tr>
+        <td><%= workorder.description %></td>
+        <td><%= workorder.caller %></td>
+        <td><%= workorder.type %></td>
+        <td><%= workorder.technician %></td>
+        <td><%= workorder.attachment %></td>
+        <td><%= workorder.target_date %></td>
+        <td><%= link_to 'Show', workorder %></td>
+        <td><%= link_to 'Edit', edit_workorder_path(workorder) %></td>
+        <td><%= link_to 'Destroy', workorder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Workorder', new_workorder_path %>

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  caller: MyString
+  type: 
+  technician: MyString
+  attachment: MyString
+  target_date: 2021-05-04 06:24:46
+
+two:
+  description: MyString
+  caller: MyString
+  type: 
+  technician: MyString
+  attachment: MyString
+  target_date: 2021-05-04 06:24:46

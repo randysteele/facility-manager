@@ -1,0 +1,47 @@
+<%= form_with(model: workorder) do |form| %>
+<% if workorder.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(workorder.errors.count, "error") %> prohibited this workorder from being saved:</h2>
+
+    <ul>
+        <% workorder.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+        <% end %>
+    </ul>
+</div>
+<% end %>
+
+<div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+</div>
+
+<div class="field">
+    <%= form.label :caller %>
+    <%= form.text_field :caller %>
+</div>
+
+<div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+</div>
+
+<div class="field">
+    <%= form.label :technician %>
+    <%= form.text_field :technician %>
+</div>
+
+<div class="field">
+    <%= form.label :attachment %>
+    <%= form.text_field :attachment %>
+</div>
+
+<div class="field">
+    <%= form.label :target_date %>
+    <%= form.datetime_select :target_date %>
+</div>
+
+<div class="actions">
+    <%= form.submit %>
+</div>
+<% end %>
